@@ -1,0 +1,9 @@
+#!/usr/bin/sh
+
+SVDIR=$(dirname ${PWD}) sv start pipewire || exit 1
+
+set -e
+exec 2>&1
+echo "Starting ${PWD##*/}..."
+
+exec /usr/bin/pipewire-pulse

@@ -1,0 +1,7 @@
+#!/usr/bin/sh
+
+set -e
+exec 2>&1
+echo "Starting ${PWD##*/}..."
+
+exec /usr/bin/pipewire

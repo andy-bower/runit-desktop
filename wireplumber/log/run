@@ -1,0 +1,6 @@
+#!/bin/sh
+
+LOGDIR="$HOME/.xuserlog/$(basename $(dirname $PWD))"
+
+mkdir -p "$LOGDIR"
+exec svlogd -tt "$LOGDIR"
